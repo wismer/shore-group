@@ -18,11 +18,6 @@ class App extends Component {
     };
 
     this.stateMouseOver = this.stateMouseOver.bind(this);
-    this.changeGraphic = this.changeGraphic.bind(this);
-  }
-
-  changeGraphic(graphic = 'chart') {
-    this.setState({ activeGraphic: graphic });
   }
 
   fetchStateJSON() {
