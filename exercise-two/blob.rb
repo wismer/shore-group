@@ -70,7 +70,7 @@ class Grid
     }
   end
 
-  def do_it_this_way
+  def calibrate
     cx = @grid.index do |row|
       row.any? do |r|
         @reads += 1
@@ -112,7 +112,6 @@ class Grid
   end
 
   def run
-    puts "reads so far #{@reads}"
     @queue.add([x, y])
     path = []
 
@@ -136,7 +135,7 @@ class Grid
         end
       end
     end
-    binding.pry
+    puts @results
   end
 end
 
@@ -156,6 +155,6 @@ sample_data = [
 
 g = Grid.new(sample_data)
 
-g.do_it_this_way
+g.calibrate
 
 g.run
