@@ -132,10 +132,11 @@ class Grid
           update_borders(c, cx, cy)
           path.push([cx, cy])
           @queue.add([cx, cy])
+          break
         end
       end
     end
-    puts @results
+    puts "Results #{@results}, Reads: #{@reads}"
   end
 end
 
